@@ -1,0 +1,47 @@
+---
+import "tailwindcss/tailwind.css";
+import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
+
+import { website } from "../../utils/update";
+
+// {(characters as any[]).map(product => {
+export async function getStaticPaths() {
+  const venueData = await website();
+  const paths = [];
+  for (const [account, content] of Object.entries(venueData.export)) {
+    paths.push({
+      params: {
+        account
+      },
+      props: {
+        metadata: {
+          title: "JSON Parser Support Online",
+          description: "JSON parser, JSON formatter, online JSON tool, JSON analyzer, JavaScript JSON parser, JSON tree view, syntax highlighting JSON, validate JSON syntax, real-time JSON analysis tool, secure JSON processing, private JSON formatter, debug JSON online, beautify JSON, minify JSON, JSON viewer, JSON editing tool",
+          keywords: "JSON parser, JSON formatter, online JSON tool, JSON analyzer, JavaScript JSON parser, JSON tree view, syntax highlighting JSON, validate JSON syntax, real-time JSON analysis tool, secure JSON processing, private JSON formatter, debug JSON online, beautify JSON, minify JSON, JSON viewer, JSON editing tool",
+          url: `${process.env.HOST}${account}`,
+          image: "/favicon.png",
+          datePublished: new Date().toISOString().split("T")[0],
+        },
+        content
+      }
+    });
+  }
+  return paths;
+}
+---
+<Layout metadata={Astro.props.metadata}>
+  coin = {Astro.props.content.coin}
+
+  角色
+	{(Astro.props.content.characters as any[]).map(character => {
+    return (<h1>{character.name}</h1>);
+  })}
+
+	道具
+	{(Astro.props.content.items as any[]).map(item => {
+    return (<h1>{item.name} x {item.count}</h1>);
+  })}
+
+  <pre>{JSON.stringify(Astro.props.content, null, 2)}</pre>
+</Layout>
