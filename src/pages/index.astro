@@ -17,43 +17,135 @@ const characters = (venueData.businessUnit.products as any[]).filter(product => 
 const items = (venueData.businessUnit.products as any[]).filter(product => product.tags.includes("加速"));
 ---
 <Layout metadata={metadata}>
-	角色
-	{(characters as any[]).map(product => {
-    return (<sl-card class="card-overview">
-			<sl-carousel pagination navigation mouse-dragging loop autoplay>
-				{(product.images).map(image => {
-				return (<sl-carousel-item>
-					<img loading="lazy" alt={product.name} src={`https://strapi.paintik.xyz${image.url}`} />
-				</sl-carousel-item>);
+	<section class="tf-section live-auctions mobie-style">
+    <div class="themesflat-container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="tf-title">
+            角色</h2>
+          <div class="heading-line"></div>
+        </div>
+        <div class="swiper-container show-shadow carousel pad-t-24 auctions">
+          <div class="swiper-wrapper">
+            {(characters as any[]).map(product => {
+    					return (<div class="swiper-slide">
+								<div class="slider-item">										
+									<div class="sc-card-product">
+										<div class="card-media">
+											<a href="item-details.html"><img src="assets/images/box-item/card-item8.jpg" alt="Image"></a>
+											<button class="wishlist-button heart"><span class="number-like"> 100 </span></button>
+										</div>
+										<div class="card-title">
+											<h5 class="style2"><a href="item-details.html">{product.name}</a></h5>
+											<div class="tags">bsc</div>
+										</div>
+										<div class="meta-info">
+											<div class="author">
+												<div class="avatar">
+													<img src={`https://strapi.paintik.xyz${product.images[0].url}`} loading="lazy" alt={product.name} >
+												</div>
+												<div class="info">
+													<span>Creator</span>
+													<h6 class="style2"><a href="author02.html">SalvadorDali
+													</a> </h6>
+												</div>
+											</div>
+											<div class="price">
+												<span>Current Bid</span>
+												<h5> {product.cost} ETH</h5>
+											</div>
+										</div>
+									</div>  	
+								</div><!-- item-->
+							</div>);
+						})}
+            <div class="swiper-slide">
+              <div class="slider-item">										
+                <div class="sc-card-product">
+                  <div class="card-media">
+                    <a href="item-details.html"><img src="assets/images/box-item/image-box-21.jpg" alt="Image"></a>
+                    <button class="wishlist-button heart"><span class="number-like"> 145</span></button>
+                    <div class="featured-countdown">
+                      <span class="slogan"></span>
+                      <span class="js-countdown" data-timer="716400" data-labels=" :  ,  : , : , "></span>
+                    </div>
+                    <div class="button-place-bid">
+                      <a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></a>
+                    </div>
+                  </div>
+                  <div class="card-title">
+                    <h5 class="style2"><a href="item-details.html">"Flame Dress' by Balmain Contemplates "</a></h5>
+                    <div class="tags">bsc</div>
+                  </div>
+                  <div class="meta-info">
+                    <div class="author">
+                      <div class="avatar">
+                        <img src="assets/images/avatar/avt-14.jpg" alt="">
+                      </div>
+                      <div class="info">
+                        <span>Creator</span>
+                        <h6 class="style2"><a href="author02.html">Tyler Covington</a> </h6>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <span>Current Bid</span>
+                      <h5> 4.89 ETH</h5>
+                    </div>
+                  </div>
+                </div>  	
+              </div><!-- item-->  
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next btn-slide-next"></div>
+          <div class="swiper-button-prev btn-slide-prev"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+	<section class="tf-section">
+		<div class="themesflat-container">
+			<div class="row">
+				<div class="col-md-12">
+						<h2 class="tf-title pb-12">
+							道具</h2>
+						<div class="heading-line s2"></div>
+				</div>
+				{(items as any[]).map(product => {
+					return (
+					<div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+						<div class="sc-card-product">
+								<div class="card-media">
+										<a href="item-details.html"><img src={`https://strapi.paintik.xyz${product.images[0].url}`} alt={product.name}></a>
+										<button class="wishlist-button heart"><span class="number-like"> 100</span></button>
+								</div>
+								<div class="card-title">
+										<h5 class="style2"><a href="item-details.html">{product.name}</a></h5>
+										<div class="tags">bsc</div>
+								</div>
+								<div class="meta-info">
+										<div class="author">
+												<div class="avatar">
+														<img src="assets/images/avatar/avt-1.jpg" alt="Image">
+												</div>
+												<div class="info">
+														<span>Owned By</span>
+														<h6 class="style2"><a href="author02.html">SalvadorDali</a> </h6>
+												</div>
+										</div>
+										<div class="price">
+												<span>Current Bid</span>
+												<h5> {product.cost} ETH</h5>
+										</div>
+								</div>
+								<div class="card-bottom">
+										<a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style bag fl-button pri-3"><span>Place Bid</span></a>
+										<a href="activity1.html" class="view-history reload">View History</a>
+								</div>
+						</div>
+					</div>);
 				})}
-			</sl-carousel>
-			<strong>{product.name}</strong><br />
-			${product.cost}
-			<small>6 weeks old</small>
-			<div slot="footer">
-				<sl-button variant="primary" pill>買</sl-button>
-				<sl-rating></sl-rating>
 			</div>
-		</sl-card>);
-  })}
-	道具
-	{(items as any[]).map(product => {
-    return (<sl-card class="card-overview">
-			<sl-carousel pagination navigation mouse-dragging loop autoplay>
-				{(product.images).map(image => {
-				return (<sl-carousel-item>
-					<img loading="lazy" alt={product.name} src={`https://strapi.paintik.xyz${image.url}`} />
-				</sl-carousel-item>);
-				})}
-			</sl-carousel>
-			<strong>{product.name}</strong><br />
-			${product.cost} = ${product.effect.speedup}/HR
-			<small>6 weeks old</small>
-			<div slot="footer">
-				<sl-button variant="primary" pill>買</sl-button>
-				<sl-rating></sl-rating>
-			</div>
-		</sl-card>);
-  })}
-	<pre>{JSON.stringify(venueData, null, 2)}</pre>
+		</div>
+</section>
 </Layout>
