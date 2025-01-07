@@ -38,8 +38,8 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
 										</div>
 										<div class="card-title">
 											<h5 class="style2">
-                                             <a href="item-details.html" style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 初始幽靈 </a>
-                                             </h5>
+                        <a style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 初始幽靈 </a>
+                      </h5>
 											<div class="tags">SOL</div>
 										</div>
 										<div class="meta-info">
@@ -76,9 +76,9 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
                       <a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style-place-bid style bag fl-button pri-3"><span>購買按鈕</span></a>
                     </div>
                   </div>
-                  <div class="card-title">
+                    <div class="card-title">
                      <h5 class="style2">
-                       <a href="item-details.html" style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 天使幽靈 </a>
+                       <a style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 天使幽靈 </a>
                      </h5>
                     <div class="tags">SOL</div>
                   </div>
@@ -116,7 +116,7 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
                   </div>
                   <div class="card-title">
                      <h5 class="style2">
-                       <a href="item-details.html" style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 天使幽靈 </a>
+                       <a style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 惡魔幽靈 </a>
                      </h5>
                     <div class="tags">SOL</div>
                   </div>
@@ -155,16 +155,17 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
 						<div class="heading-line s2"></div>
 				</div>
 				{(items as any[]).map(product => {
-					return (
-					<div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+					return (<div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
 						<div class="sc-card-product">
 								<div class="card-media">
-										<a href="item-details.html"><img src={`https://i.imgur.com/6qjidMG.png`} alt={product.name}></a>
+										<a href="item-details.html"><img src="https://i.imgur.com/6qjidMG.png" alt="Image"></a>
 										<button class="wishlist-button heart"><span class="number-like"> 100</span></button>
 								</div>
 								<div class="card-title">
-										<h5 class="style2"><a href="item-details.html">{product.name}</a></h5>
-										<div class="tags">bsc</div>
+                  <h5 class="style2">
+                       <a style="color: rgb(112, 118, 111); font-weight: bold; font-size: 20px; "> 幽靈加速器 </a>
+                  </h5>
+                    <div class="tags">SOL</div>
 								</div>
 								<div class="meta-info">
 										<div class="author">
@@ -173,19 +174,22 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
 												</div>
 												<div class="info">
 														<span>加速頻率</span>
-														<h6 class="style2"><a href="author02.html">+0</a> </h6>
+														<h6 class="style2"><a href="author02.html">購買金額</a> </h6>
 												</div>
 										</div>
 										<div class="price">
-												<span>Current Bid</span>
-												<h5> {product.cost} ETH</h5>
+												<span>+0.05 SOL</span>
+												<h5> {product.cost} SOL</h5>
 										</div>
 								</div>
 								<div class="card-bottom">
-										<a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style bag fl-button pri-3"><span>Place Bid</span></a>
-										<a href="activity1.html" class="view-history reload">View History</a>
+										<a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style bag fl-button pri-3"><span>購買按鈕</span></a>
+										<a href="activity1.html" class="view-history reload" style="color: rgb(199, 222, 226); font-weight: bold; font-size: 18px; line-height: 1;">歷史成交</a>
 								</div>
 						</div>
+
+
+					 </div>
 					</div>);
 				})}
 			</div>
