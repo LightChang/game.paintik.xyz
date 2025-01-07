@@ -5,11 +5,11 @@ import "../styles/global.css";
 import { website } from "../utils/update";
 
 export const metadata = {
-  title: "game.paintik.xyz",
-  description: "game.paintik.xyz",
-  keywords: "game.paintik.xyz",
+  title: "Chillangel play to earn",
+  description: "Chillangel play to earn",
+  keywords: "Chillangel play to earn",
   url: "https://game.paintik.xyz/",
-  image: "favicon.png",
+  image: "https://i.imgur.com/dgBXMcB.png",
   datePublished: new Date().toISOString().split("T")[0],
 };
 const venueData = await website();
@@ -22,7 +22,8 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
       <div class="row">
         <div class="col-md-12">
           <h2 class="tf-title">
-            角色</h2>
+            <a style="color: rgb(193, 190, 206); font-weight: bold; font-size: 20px; "> 角色選擇 </a>
+		  </h2>
           <div class="heading-line"></div>
         </div>
         <div class="swiper-container show-shadow carousel pad-t-24 auctions">
@@ -32,27 +33,29 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
 								<div class="slider-item">										
 									<div class="sc-card-product">
 										<div class="card-media">
-											<a href="item-details.html"><img src="assets/images/box-item/card-item8.jpg" alt="Image"></a>
+											<a href="item-details.html"><img src="https://i.imgur.com/dgBXMcB.png" alt="Image"></a>
 											<button class="wishlist-button heart"><span class="number-like"> 100 </span></button>
 										</div>
 										<div class="card-title">
-											<h5 class="style2"><a href="item-details.html">{product.name}</a></h5>
-											<div class="tags">bsc</div>
+											<h5 class="style2">
+                                             <a href="item-details.html" style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 初始幽靈 </a>
+                                             </h5>
+											<div class="tags">SOL</div>
 										</div>
 										<div class="meta-info">
 											<div class="author">
 												<div class="avatar">
-													<img src={`https://strapi.paintik.xyz${product.images[0].url}`} loading="lazy" alt={product.name} >
+													<img src={`https://i.imgur.com/dgBXMcB.png`} loading="lazy" alt={product.name} >
 												</div>
 												<div class="info">
-													<span>Creator</span>
-													<h6 class="style2"><a href="author02.html">SalvadorDali
+													<span>挖礦速度</span>
+													<h6 class="style2"><a href="author02.html">購買金額
 													</a> </h6>
 												</div>
 											</div>
 											<div class="price">
-												<span>Current Bid</span>
-												<h5> {product.cost} ETH</h5>
+												<span>0.01 SOL / 1hr</span>
+												<h5> 0.00 SOL</h5>
 											</div>
 										</div>
 									</div>  	
@@ -63,38 +66,77 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
               <div class="slider-item">										
                 <div class="sc-card-product">
                   <div class="card-media">
-                    <a href="item-details.html"><img src="assets/images/box-item/image-box-21.jpg" alt="Image"></a>
+                    <a href="item-details.html"><img src="https://i.imgur.com/7RThe3X.png" alt="Image"></a>
                     <button class="wishlist-button heart"><span class="number-like"> 145</span></button>
                     <div class="featured-countdown">
                       <span class="slogan"></span>
                       <span class="js-countdown" data-timer="716400" data-labels=" :  ,  : , : , "></span>
                     </div>
                     <div class="button-place-bid">
-                      <a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></a>
+                      <a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style-place-bid style bag fl-button pri-3"><span>購買按鈕</span></a>
                     </div>
                   </div>
                   <div class="card-title">
-                    <h5 class="style2"><a href="item-details.html">"Flame Dress' by Balmain Contemplates "</a></h5>
-                    <div class="tags">bsc</div>
+                     <h5 class="style2">
+                       <a href="item-details.html" style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 天使幽靈 </a>
+                     </h5>
+                    <div class="tags">SOL</div>
                   </div>
                   <div class="meta-info">
                     <div class="author">
                       <div class="avatar">
-                        <img src="assets/images/avatar/avt-14.jpg" alt="">
+                        <img src="https://i.imgur.com/7RThe3X.png" alt="">
                       </div>
                       <div class="info">
-                        <span>Creator</span>
-                        <h6 class="style2"><a href="author02.html">Tyler Covington</a> </h6>
+                        <span>挖礦速度</span>
+                        <h6 class="style2"><a href="author02.html">購買金額</a> </h6>
                       </div>
                     </div>
                     <div class="price">
-                      <span>Current Bid</span>
-                      <h5> 4.89 ETH</h5>
+                      <span>0.03 SOL / 1hr</span>
+                      <h5> 0.5 SOL</h5>
                     </div>
                   </div>
                 </div>  	
               </div><!-- item-->  
             </div>
+			<div class="swiper-slide">
+              <div class="slider-item">										
+                <div class="sc-card-product">
+                  <div class="card-media">
+                    <a href="item-details.html"><img src="https://i.imgur.com/nlmUxaz.png" alt="Image"></a>
+                    <button class="wishlist-button heart"><span class="number-like"> 300</span></button>
+                    <div class="featured-countdown">
+                      <span class="slogan"></span>
+                      <span class="js-countdown" data-timer="716400" data-labels=" :  ,  : , : , "></span>
+                    </div>
+                    <div class="button-place-bid">
+                      <a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style-place-bid style bag fl-button pri-3"><span>購買按鈕</span></a>
+                    </div>
+                  </div>
+                  <div class="card-title">
+                     <h5 class="style2">
+                       <a href="item-details.html" style="color: rgb(86, 231, 46); font-weight: bold; font-size: 20px; "> 天使幽靈 </a>
+                     </h5>
+                    <div class="tags">SOL</div>
+                  </div>
+                  <div class="meta-info">
+                    <div class="author">
+                      <div class="avatar">
+                        <img src="https://i.imgur.com/nlmUxaz.png" alt="">
+                      </div>
+                      <div class="info">
+                        <span>挖礦速度</span>
+                        <h6 class="style2"><a href="author02.html">購買金額</a> </h6>
+                      </div>
+                    </div>
+                    <div class="price">
+                      <span>0.03 SOL / 1hr</span>
+                      <h5> 0.5 SOL</h5>
+                    </div>
+                  </div>
+                </div>  	
+              </div><!-- item-->  
           </div>
           <div class="swiper-pagination"></div>
           <div class="swiper-button-next btn-slide-next"></div>
@@ -108,7 +150,8 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
 			<div class="row">
 				<div class="col-md-12">
 						<h2 class="tf-title pb-12">
-							道具</h2>
+							<a style="color: rgb(193, 190, 206); font-weight: bold; font-size: 20px; "> 加速道具 </a>
+						</h2>
 						<div class="heading-line s2"></div>
 				</div>
 				{(items as any[]).map(product => {
@@ -116,7 +159,7 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
 					<div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
 						<div class="sc-card-product">
 								<div class="card-media">
-										<a href="item-details.html"><img src={`https://strapi.paintik.xyz${product.images[0].url}`} alt={product.name}></a>
+										<a href="item-details.html"><img src={`https://i.imgur.com/6qjidMG.png`} alt={product.name}></a>
 										<button class="wishlist-button heart"><span class="number-like"> 100</span></button>
 								</div>
 								<div class="card-title">
@@ -126,11 +169,11 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
 								<div class="meta-info">
 										<div class="author">
 												<div class="avatar">
-														<img src="assets/images/avatar/avt-1.jpg" alt="Image">
+														<img src="https://i.imgur.com/6qjidMG.png" alt="Image">
 												</div>
 												<div class="info">
-														<span>Owned By</span>
-														<h6 class="style2"><a href="author02.html">SalvadorDali</a> </h6>
+														<span>加速頻率</span>
+														<h6 class="style2"><a href="author02.html">+0</a> </h6>
 												</div>
 										</div>
 										<div class="price">
