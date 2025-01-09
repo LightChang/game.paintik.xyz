@@ -14,22 +14,63 @@ import { website } from "../utils/update";
 const venueData = await website();
 ---
 <Layout metadata={metadata}>
-  <div class="container mx-auto">
-    <h1 class="text-4xl font-bold text-center">Chillangel play to earn</h1>
-    <form 
-      action={`${process.env.HOST}api/venue/register`}
-      method="post" 
-      class="space-y-4"
-    >
-      <sl-input name="nameTw" label="中文姓名"></sl-input>
-      <sl-input name="nameEn" label="英文姓名"></sl-input>
-      <sl-input name="phone" label="手機號碼"></sl-input>
-      <sl-input name="tg" label="TG帳號"></sl-input>
-      <sl-input name="line" label="LINE帳號"></sl-input>
-      <sl-input name="email" label="信箱"></sl-input>
-      <sl-input name="wallet" label="綁定錢包地址"></sl-input>
-      <input type="hidden" name="venue" value={venueData.documentId} />
-      <sl-button type="submit" pill>註冊</sl-button>
-    </form>
-  </div>
+
+  <!-- title page -->
+  <section class="flat-title-page inner">
+    <div class="overlay"></div>
+    <div class="themesflat-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-title-heading mg-bt-12">
+                    <h1 class="heading text-center"></h1>
+                </div>
+                <div class="breadcrumbs style2">
+                    <ul>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>                    
+</section>  
+<section class="tf-login tf-section">
+    <div class="themesflat-container">
+       <div class="row">
+         <div class="col-12">
+           <h2 class="tf-title-heading ct style-1">
+             <a style="color: rgb(86, 231, 46); font-weight: bold; font-size: 50px; "> 註冊 Chillangel </a>
+           </h2>
+
+
+        <div class="flat-form box-login-email">
+         <div class="box-title-login">
+          <h5>Or login with email</h5>
+         </div>
+
+        <div class="form-inner">
+         <form action="#" id="contactform">
+           <input id="name" name="name" tabindex="1" value="" aria-required="true" required type="text" placeholder="Your Full Name">
+           <input id="email" name="email" tabindex="2"  value="" aria-required="true" type="email" placeholder="Your Email Address" required>
+           <input id="pass" name="pass" tabindex="3"  value="" aria-required="true" type="text" placeholder="Set Your Password" required>
+           <input id="Your Telegram" name="Your Telegram" tabindex="4"  value="" aria-required="true" type="text" placeholder="Your Telegram" required>
+           <input id="Wallet address" name="Wallet address" tabindex="5"  value="" aria-required="true" type="text" placeholder="Set Your Wallet address" required>
+        <div class="row-form style-1">
+           <label>Remember me
+            <input type="checkbox">
+            <span class="btn-checkbox"></span>
+         </label>
+           <a href="#" class="forgot-pass">Forgot Password ?</a>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="#" class="sc-button style-2 fl-button pri-3">
+          <i class="submit"></i>
+          <span>Login</span>
+          </a>
+        </li>
+      </ul>
+  </div>  
+</form>
+</div>
 </Layout>
