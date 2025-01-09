@@ -23,17 +23,17 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
         <div class="col-md-12">
           <h2 class="tf-title">
             <a style="color: rgb(193, 190, 206); font-weight: bold; font-size: 20px; "> 角色選擇 </a>
-		  </h2>
+		      </h2>
           <div class="heading-line"></div>
         </div>
+        
         <div class="swiper-container show-shadow carousel pad-t-24 auctions">
           <div class="swiper-wrapper">
-            {(characters as any[]).map(product => {
-    					return (<div class="swiper-slide">
+            {(characters as any[]).map(product => {return (<div class="swiper-slide">
 								<div class="slider-item">										
 									<div class="sc-card-product">
 										<div class="card-media">
-											<a href="item-details.html"><img src="https://i.imgur.com/dgBXMcB.png" alt="Image"></a>
+											<a > <img src="https://i.imgur.com/dgBXMcB.png" alt="Image"></a>
 											<button class="wishlist-button heart"><span class="number-like"> 100 </span></button>
 										</div>
 										<div class="card-title">
@@ -66,7 +66,7 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
               <div class="slider-item">										
                 <div class="sc-card-product">
                   <div class="card-media">
-                    <a href="item-details.html"><img src="https://i.imgur.com/7RThe3X.png" alt="Image"></a>
+                    <a > <img src="https://i.imgur.com/7RThe3X.png" alt="Image"></a>
                     <button class="wishlist-button heart"><span class="number-like"> 145</span></button>
                     <div class="featured-countdown">
                       <span class="slogan"></span>
@@ -94,7 +94,7 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
                     </div>
                     <div class="price">
                       <span>0.03 SOL / 1hr</span>
-                      <h5> 0.5 SOL</h5>
+                      <h5> 1.00 SOL</h5>
                     </div>
                   </div>
                 </div>  	
@@ -104,7 +104,7 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
               <div class="slider-item">										
                 <div class="sc-card-product">
                   <div class="card-media">
-                    <a href="item-details.html"><img src="https://i.imgur.com/nlmUxaz.png" alt="Image"></a>
+                    <a > <img src="https://i.imgur.com/nlmUxaz.png" alt="Image"></a>
                     <button class="wishlist-button heart"><span class="number-like"> 300</span></button>
                     <div class="featured-countdown">
                       <span class="slogan"></span>
@@ -131,8 +131,8 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
                       </div>
                     </div>
                     <div class="price">
-                      <span>0.03 SOL / 1hr</span>
-                      <h5> 0.5 SOL</h5>
+                      <span>0.06 SOL / 1hr</span>
+                      <h5> 1.50 SOL</h5>
                     </div>
                   </div>
                 </div>  	
@@ -145,20 +145,24 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
       </div>
     </div>
   </section>
-	<section class="tf-section">
+	<section class="tf-section ">
 		<div class="themesflat-container">
 			<div class="row">
 				<div class="col-md-12">
 						<h2 class="tf-title pb-12">
-							<a style="color: rgb(193, 190, 206); font-weight: bold; font-size: 20px; "> 加速道具 </a>
+				      <a style="color: rgb(193, 190, 206); font-weight: bold; font-size: 20px; "> 加速道具 </a>
 						</h2>
 						<div class="heading-line s2"></div>
 				</div>
-				{(items as any[]).map(product => {
-					return (<div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-						<div class="sc-card-product">
+
+
+        <div class="swiper-container show-shadow carousel pad-t-24 auctions">
+          <div class="swiper-wrapper">
+            {(characters as any[]).map(product => {return (<div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+						 <div class="slider-item">										
+							<div class="sc-card-product">
 								<div class="card-media">
-										<a href="item-details.html"><img src="https://i.imgur.com/6qjidMG.png" alt="Image"></a>
+										<a > <img src="https://i.imgur.com/6qjidMG.png" alt="Image"></a>
 										<button class="wishlist-button heart"><span class="number-like"> 100</span></button>
 								</div>
 								<div class="card-title">
@@ -179,20 +183,84 @@ const items = (venueData.businessUnit.products as any[]).filter(product => produ
 										</div>
 										<div class="price">
 												<span>+0.05 SOL</span>
-												<h5> {product.cost} SOL</h5>
+												<h5> 1.00  SOL</h5>
 										</div>
 								</div>
 								<div class="card-bottom">
 										<a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style bag fl-button pri-3"><span>購買按鈕</span></a>
-										<a href="activity1.html" class="view-history reload" style="color: rgb(199, 222, 226); font-weight: bold; font-size: 18px; line-height: 1;">歷史成交</a>
-								</div>
-						</div>
-
-
+										<a href="activity1.html" class="view-history reload" style="color: rgb(199, 222, 226); font-weight: bold; font-size: 18px; line-height: 1;">100 / 100</a>
+								</div> 
+						  </div>
 					 </div>
+
+           <div class="slider-item">										
+							<div class="sc-card-product">
+								<div class="card-media">
+										<a > <img src="https://i.imgur.com/Kk4Ugzq.png" alt="Image"></a>
+										<button class="wishlist-button heart"><span class="number-like"> 100</span></button>
+								</div>
+								<div class="card-title">
+                  <h5 class="style2">
+                       <a style="color: rgb(129, 176, 121); font-weight: bold; font-size: 20px; "> 天使加速器 </a>
+                  </h5>
+                    <div class="tags">SOL</div>
+								</div>
+								<div class="meta-info">
+										<div class="author">
+												<div class="avatar">
+														<img src="https://i.imgur.com/Kk4Ugzq.png" alt="Image">
+												</div>
+												<div class="info">
+														<span>加速頻率</span>
+														<h6 class="style2"><a href="author02.html">購買金額</a> </h6>
+												</div>
+										</div>
+										<div class="price">
+												<span>+0.08 SOL</span>
+												<h5> 1.50 SOL</h5>
+										</div>
+								</div>
+								<div class="card-bottom">
+										<a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style bag fl-button pri-3"><span>購買按鈕</span></a>
+										<a href="activity1.html" class="view-history reload" style="color: rgb(199, 222, 226); font-weight: bold; font-size: 18px; line-height: 1;">100 / 100</a>
+								</div> 
+              </div> 
+            </div> 
+            <div class="slider-item">										
+							<div class="sc-card-product">
+								<div class="card-media">
+										<a > <img src="https://i.imgur.com/sPjICfI.png" alt="Image"></a>
+										<button class="wishlist-button heart"><span class="number-like"> 100</span></button>
+								</div>
+								<div class="card-title">
+                  <h5 class="style2">
+                       <a style="color: rgb(129, 176, 121); font-weight: bold; font-size: 20px; "> 惡魔加速器 </a>
+                  </h5>
+                    <div class="tags">SOL</div>
+								</div>
+								<div class="meta-info">
+										<div class="author">
+												<div class="avatar">
+														<img src="https://i.imgur.com/sPjICfI.png" alt="Image">
+												</div>
+												<div class="info">
+														<span>加速頻率</span>
+														<h6 class="style2"><a href="author02.html">購買金額</a> </h6>
+												</div>
+										</div>
+										<div class="price">
+												<span>+0.1 SOL</span>
+												<h5> 1.70 SOL</h5>
+										</div>
+								</div>
+								<div class="card-bottom">
+										<a href="#" data-toggle="modal" data-target="#popup_bid" class="sc-button style bag fl-button pri-3"><span>購買按鈕</span></a>
+										<a href="activity1.html" class="view-history reload" style="color: rgb(199, 222, 226); font-weight: bold; font-size: 18px; line-height: 1;">100 / 100</a>
+								</div> 
+              </div> 
+            </div> 
 					</div>);
 				})}
-			</div>
 		</div>
 </section>
 </Layout>
