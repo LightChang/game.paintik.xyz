@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "tailwindcss/tailwind.css";
+import "../styles/global.css";
+export const metadata = {
+  title: "Chillangel play to earn",
+  description: "Chillangel play to earn",
+  keywords: "Chillangel play to earn",
+  url: "https://game.paintik.xyz/",
+  image: "https://i.imgur.com/dgBXMcB.png",
+  datePublished: new Date().toISOString().split("T")[0],
+};
+import { website } from "../utils/update";
+const venueData = await website();
+---
+<Layout metadata={metadata}>
+  <div class="container mx-auto">
+    <h1 class="text-4xl font-bold text-center">卡牌正在跑</h1>
+    <h1 class="text-4xl font-bold text-center">卡牌正在跑</h1>
+    <h1 class="text-4xl font-bold text-center">卡牌正在跑</h1>
+    <h1 class="text-4xl font-bold text-center">卡牌正在跑</h1>
+    <h1 class="text-4xl font-bold text-center">卡牌正在跑</h1>
+    <h1 class="text-4xl font-bold text-center">卡牌正在跑</h1>
+    <h1 class="text-4xl font-bold text-center">卡牌正在跑</h1>
+  </div>
+</Layout>
